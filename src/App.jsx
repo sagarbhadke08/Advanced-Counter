@@ -5,21 +5,22 @@ import { log } from './log.js';
 import ConfigureCounter from './components/Counter/ConfigureCounter.jsx';
 
 
-const [chosenCount, setChosenCount] = useState(0);
-
-function handleSetCount(newCount){
-  setChosenCount(newCount);
-}
 
 function App() {
+  const [chosenCount, setChosenCount] = useState(0);
+
+  function handleSetCount(newCount) {
+    setChosenCount(newCount);
+  }
+
   log('<App /> rendered');
 
-  
+
   return (
     <>
       <Header />
       <main>
-        <ConfigureCounter onSet={handleSetCount}/>
+        <ConfigureCounter onSet={handleSetCount} />
         <Counter initialCount={chosenCount} />
       </main>
     </>
