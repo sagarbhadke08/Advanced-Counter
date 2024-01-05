@@ -5,7 +5,6 @@ import { log } from './log.js';
 import ConfigureCounter from './components/Counter/ConfigureCounter.jsx';
 
 
-
 function App() {
   const [chosenCount, setChosenCount] = useState(0);
 
@@ -14,7 +13,6 @@ function App() {
   }
 
   log('<App /> rendered');
-
 
   return (
     <>
